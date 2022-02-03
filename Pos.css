@@ -1,0 +1,5 @@
+.table-view .column-header{
+	-fx-text-fill:white;
+	-fx-background-color:#639A67;
+	-fx-size:50;
+}

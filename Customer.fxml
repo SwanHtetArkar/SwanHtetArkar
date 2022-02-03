@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="768.0" prefWidth="1366.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.CustomerViewController">
+   <center>
+      <AnchorPane prefHeight="697.0" prefWidth="1251.0" style="-fx-font-size: 18;" BorderPane.alignment="CENTER">
+         <children>
+            <TextField fx:id="txfSearch" layoutX="23.0" layoutY="14.0" onAction="#txfSearchOnAction" prefHeight="48.0" prefWidth="1228.0" promptText="Search By Customer Name" style="-fx-background-color: #ECF2F7;" AnchorPane.leftAnchor="12.0" AnchorPane.topAnchor="10.0">
+               <font>
+                  <Font size="18.0" />
+               </font></TextField>
+            <Button fx:id="btnSearch" layoutX="995.0" layoutY="22.0" mnemonicParsing="false" onAction="#btnSearchOnAction" prefHeight="30.0" prefWidth="111.0" style="-fx-background-color: #35A8E9;" text="Search" textFill="#ededed" AnchorPane.leftAnchor="956.0" AnchorPane.topAnchor="20.0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnCancle" layoutX="1095.0" layoutY="10.0" mnemonicParsing="false" onAction="#btnCancleOnAction" prefHeight="30.0" prefWidth="111.0" style="-fx-background-color: #E67B73;" text="Cancel" textFill="#ededed" AnchorPane.leftAnchor="1082.0" AnchorPane.topAnchor="20.0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Label layoutX="31.0" layoutY="85.0" text="Filter by:" AnchorPane.leftAnchor="37.0" AnchorPane.topAnchor="79.0">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Line endX="1148.0" layoutX="105.0" layoutY="154.0" startX="-100.0" stroke="#e5e5e5" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="126.0" />
+            <ComboBox fx:id="cmbBy" layoutX="133.0" layoutY="73.0" onAction="#cmbByOnAction" prefHeight="48.0" prefWidth="180.0" promptText="By" style="-fx-background-color: #35A8E9;" AnchorPane.leftAnchor="149.0" AnchorPane.topAnchor="72.0" />
+            <ComboBox fx:id="cmbValue" layoutX="372.0" layoutY="73.0" onAction="#cmbValueOnAction" prefHeight="48.0" prefWidth="150.0" promptText="Value" style="-fx-background-color: #35A8E9;" AnchorPane.leftAnchor="351.0" AnchorPane.topAnchor="72.0" />
+            <AnchorPane layoutY="655.0" prefHeight="46.0" prefWidth="1260.0" style="-fx-background-color: #ECF2F7;" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <children>
+                  <Button fx:id="btnUpdate" layoutX="915.0" layoutY="4.0" mnemonicParsing="false" onAction="#btnUpdateOnAction" prefHeight="34.0" prefWidth="92.0" style="-fx-background-color: #35A8E9;" text="Update" textFill="#ededed" AnchorPane.leftAnchor="906.0" AnchorPane.topAnchor="4.0">
+                     <font>
+                        <Font size="11.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnDelete" layoutX="1030.0" layoutY="5.0" mnemonicParsing="false" onAction="#btnDeleteOnAction" prefHeight="34.0" prefWidth="92.0" style="-fx-background-color: #E67B73;" text="Delele" textFill="#ededed" AnchorPane.leftAnchor="1026.0" AnchorPane.topAnchor="4.0">
+                     <font>
+                        <Font size="11.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnAddNew" layoutX="1149.0" layoutY="4.0" mnemonicParsing="false" onAction="#btnAddNewOnAction" prefHeight="34.0" prefWidth="92.0" style="-fx-background-color: #639A67;" text="Add New" textFill="#ededed" AnchorPane.leftAnchor="1146.0" AnchorPane.topAnchor="4.0">
+                     <font>
+                        <Font size="11.0" />
+                     </font>
+                  </Button>
+                  <FontAwesomeIcon fx:id="Update" fill="WHITE" iconName="PENCIL_SQUARE" layoutX="974.0" layoutY="28.0" />
+                  <FontAwesomeIcon fx:id="Delete" fill="WHITE" iconName="TRASH" layoutX="1097.0" layoutY="28.0" />
+                  <FontAwesomeIcon fx:id="AddNew" fill="WHITE" iconName="PLUS_CIRCLE" layoutX="1218.0" layoutY="28.0" />
+                  <FontAwesomeIcon fx:id="FastBackward" iconName="FAST_BACKWARD" layoutX="20.0" layoutY="30.0" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="14.0" />
+                  <FontAwesomeIcon fx:id="Backward" iconName="BACKWARD" layoutX="68.0" layoutY="26.0" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="14.0" />
+                  <FontAwesomeIcon fx:id="StepBackward" iconName="STEP_BACKWARD" layoutX="131.0" layoutY="22.0" AnchorPane.leftAnchor="100.0" AnchorPane.topAnchor="14.0" />
+                  <FontAwesomeIcon fx:id="StepForward" iconName="STEP_FORWARD" layoutX="188.0" layoutY="25.0" AnchorPane.leftAnchor="140.0" AnchorPane.topAnchor="14.0" />
+                  <FontAwesomeIcon fx:id="Forward" iconName="FORWARD" layoutX="237.0" layoutY="29.0" AnchorPane.leftAnchor="180.0" AnchorPane.topAnchor="14.0" />
+                  <FontAwesomeIcon fx:id="FastForward" iconName="FAST_FORWARD" layoutX="314.0" layoutY="25.0" AnchorPane.leftAnchor="220.0" AnchorPane.topAnchor="14.0" />
+                  <Separator layoutX="47.0" layoutY="5.0" orientation="VERTICAL" prefHeight="35.0" AnchorPane.leftAnchor="47.0" AnchorPane.topAnchor="5.0" />
+                  <Separator layoutX="84.0" layoutY="5.0" orientation="VERTICAL" prefHeight="35.0" AnchorPane.topAnchor="5.0" />
+                  <Separator layoutX="123.0" layoutY="5.0" orientation="VERTICAL" prefHeight="35.0" prefWidth="4.0" AnchorPane.topAnchor="5.0" />
+                  <Separator layoutX="161.0" layoutY="5.0" orientation="VERTICAL" prefHeight="35.0" AnchorPane.topAnchor="5.0" />
+                  <Separator layoutX="204.0" layoutY="5.0" orientation="VERTICAL" prefHeight="35.0" AnchorPane.topAnchor="5.0" />
+                  <Button fx:id="btnFastBackward" layoutX="8.0" layoutY="11.0" mnemonicParsing="false" onAction="#btnFastBackwardOnAction" opacity="0.0" prefWidth="30.0" style="-fx-background-color: #ECF2F7;" AnchorPane.leftAnchor="16.0" AnchorPane.topAnchor="11.0">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnBackward" layoutX="51.0" layoutY="7.0" mnemonicParsing="false" onAction="#btnBackwardOnAction" opacity="0.0" prefWidth="30.0" style="-fx-background-color: #ECF2F7;" AnchorPane.leftAnchor="54.0" AnchorPane.topAnchor="11.0">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnStepBackward" layoutX="94.0" layoutY="16.0" mnemonicParsing="false" onAction="#btnStepBackwardOnAction" opacity="0.0" prefWidth="30.0" style="-fx-background-color: #ECF2F7;" AnchorPane.leftAnchor="90.0" AnchorPane.topAnchor="11.0">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnStepForward" layoutX="123.0" layoutY="17.0" mnemonicParsing="false" onAction="#btnStepForwardOnAction" opacity="0.0" prefWidth="30.0" style="-fx-background-color: #ECF2F7;" AnchorPane.leftAnchor="129.0" AnchorPane.topAnchor="11.0">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnForward" layoutX="178.0" layoutY="15.0" mnemonicParsing="false" onAction="#btnForwardOnAction" opacity="0.0" prefWidth="30.0" style="-fx-background-color: #ECF2F7;" AnchorPane.leftAnchor="169.0" AnchorPane.topAnchor="11.0">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnFastForward" layoutX="219.0" layoutY="11.0" mnemonicParsing="false" onAction="#btnFastForwardOnAction" opacity="0.0" prefWidth="30.0" style="-fx-background-color: #ECF2F7;" AnchorPane.leftAnchor="215.0" AnchorPane.topAnchor="11.0">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+             <TableView fx:id="table" layoutX="14.0" layoutY="249.0" prefHeight="389.0" prefWidth="1234.0" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="10.0">
+               <columns>
+                  <TableColumn fx:id="name" prefWidth="261.99997425079346" text="Name" />
+                  <TableColumn fx:id="address" prefWidth="576.0000610351562" text="Address" />
+                  <TableColumn fx:id="phone" prefWidth="187.9998779296875" text="Phone" />
+                  <TableColumn fx:id="township" prefWidth="204.666748046875" text="Township" />
+               </columns>
+            </TableView>
+            <ImageView fx:id="search" fitHeight="20.0" fitWidth="20.0" layoutX="897.0" layoutY="106.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="1043.0" AnchorPane.topAnchor="26.0">
+               <image>
+                  <Image url="@../img/search%201.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="cancel" fitHeight="20.0" fitWidth="20.0" layoutX="856.0" layoutY="140.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="1170.0" AnchorPane.topAnchor="26.0">
+               <image>
+                  <Image url="@../img/cancel%201.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </center>
+   <left>
+      <ScrollPane fitToHeight="true" hbarPolicy="NEVER" prefHeight="694.0" prefWidth="115.0" style="-fx-background-color: #639A67;" vbarPolicy="NEVER" BorderPane.alignment="CENTER">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="694.0" prefWidth="115.0" style="-fx-background-color: #639A67;">
+               <children>
+                  <AnchorPane fx:id="vendor" prefHeight="80.0" prefWidth="115.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="240.0">
+                     <children>
+                        <ImageView fx:id="Vendor" fitHeight="40.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="31.0" AnchorPane.topAnchor="15.0">
+                           <image>
+                              <Image url="@../img/vendor%201.png" />
+                           </image>
+                        </ImageView>
+                        <Label fx:id="Vendor" layoutX="33.0" layoutY="55.0" text="Vendor" textFill="WHITE" AnchorPane.topAnchor="55.0">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="btnVendor" mnemonicParsing="false" onAction="#btnVendorOnAction" opacity="0.0" prefHeight="80.0" prefWidth="115.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="inventory" prefHeight="80.0" prefWidth="115.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <ImageView fx:id="inventory" fitHeight="43.0" fitWidth="40.0" layoutX="34.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="34.0" AnchorPane.topAnchor="15.0">
+                           <image>
+                              <Image url="@../img/inventory1%201.png" />
+                           </image>
+                        </ImageView>
+                        <Label fx:id="inventory" layoutX="28.0" layoutY="59.0" text="Inventory" textFill="WHITE" AnchorPane.leftAnchor="28.0" AnchorPane.topAnchor="59.0">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="btnInventory" mnemonicParsing="false" onAction="#btnInventoryOnAction" opacity="0.0" prefHeight="80.0" prefWidth="115.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                     </children>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </AnchorPane>
+                  <AnchorPane fx:id="customer" prefHeight="80.0" prefWidth="115.0" style="-fx-background-color: #E1935B;" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="160.0">
+                     <children>
+                        <ImageView fx:id="Customer" fitHeight="40.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="33.0" AnchorPane.topAnchor="15.0">
+                           <image>
+                              <Image url="@../img/customer%201.png" />
+                           </image>
+                        </ImageView>
+                        <Label fx:id="Customer" layoutX="28.0" layoutY="55.0" text="Customer" textFill="WHITE" AnchorPane.leftAnchor="28.0" AnchorPane.topAnchor="55.0">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="btnCustomer" layoutX="24.0" layoutY="43.0" mnemonicParsing="false" onAction="#btnCustomerOnAction" opacity="0.0" prefHeight="80.0" prefWidth="115.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="pos" prefHeight="80.0" prefWidth="115.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="80.0">
+                     <children>
+                        <Button fx:id="btnPOS" layoutX="13.0" layoutY="15.0" mnemonicParsing="false" onAction="#btnPOSOnAction" opacity="0.0" prefHeight="80.0" prefWidth="115.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                        <Label fx:id="POS" layoutX="45.0" layoutY="59.0" text="POS" textFill="WHITE" AnchorPane.topAnchor="59.0">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <ImageView fx:id="POS" fitHeight="43.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="39.0" AnchorPane.topAnchor="15.0">
+                           <image>
+                              <Image url="@../img/pos1%201.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="unit" prefHeight="80.0" prefWidth="115.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="320.0">
+                     <children>
+                        <FontAwesomeIcon fx:id="Unit" fill="#f1b996" iconName="QRCODE" layoutX="37.0" layoutY="51.0" size="4em" AnchorPane.topAnchor="15.0" />
+                        <Label fx:id="Unit" layoutX="41.0" layoutY="57.0" text="Unit" textFill="WHITE">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="btnUnit" layoutX="30.0" layoutY="28.0" mnemonicParsing="false" onAction="#btnUnitOnAction" opacity="0.0" prefHeight="80.0" prefWidth="115.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="report" layoutX="-42.0" layoutY="400.0" prefHeight="80.0" prefWidth="115.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="400.0">
+                     <children>
+                        <FontAwesomeIcon fx:id="Report" fill="#f1b996" iconName="BAR_CHART" layoutX="30.0" layoutY="51.14285659790039" size="4em" AnchorPane.topAnchor="10.0" />
+                        <Label fx:id="Report" layoutX="35.0" layoutY="56.0" text="Report" textFill="WHITE">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="btnReport" layoutX="30.0" layoutY="28.0" mnemonicParsing="false" onAction="#btnReportOnAction" opacity="0.0" prefHeight="80.0" prefWidth="115.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+         </content>
+      </ScrollPane>
+   </left>
+   <top>
+      <AnchorPane prefHeight="70.0" prefWidth="1366.0" style="-fx-background-color: #639A67;" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fx:id="icon" fitHeight="70.0" fitWidth="80.0" layoutX="25.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="1.1666641235351562" AnchorPane.leftAnchor="25.0" AnchorPane.topAnchor="3.0">
+               <image>
+                  <Image url="@../img/cf7ec6a7c620c33626c02604b1231506%201%20(1).png" />
+               </image>
+            </ImageView>
+            <Label layoutX="116.0" layoutY="17.0" text="ThaPyayNi" textFill="#f1b996" AnchorPane.leftAnchor="116.0" AnchorPane.topAnchor="17.0">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="602.0" layoutY="15.0" text="Customer" textAlignment="CENTER" textFill="#f1b996" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="595.0" AnchorPane.rightAnchor="595.0" AnchorPane.topAnchor="15.0">
+               <font>
+                  <Font size="28.0" />
+               </font>
+            </Label>
+            <FontAwesomeIcon fx:id="Close" fill="#4c4b4b" iconName="CLOSE" layoutX="1335.0" layoutY="38.0" size="1.5em" AnchorPane.rightAnchor="30.0" />
+            <FontAwesomeIcon fx:id="Minimize" fill="#4c4b4b" iconName="MINUS" layoutX="1235.0" layoutY="39.0" size="1.5em" AnchorPane.rightAnchor="126.19047578175855" />
+            <ImageView fitHeight="12.0" fitWidth="12.0" layoutX="1288.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="75.33333333333326">
+               <image>
+                  <Image url="@../img/Rectangle%2017.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="12.0" fitWidth="12.0" layoutX="1285.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/Rectangle%2017.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="btnMax" layoutX="1277.0" layoutY="16.0" mnemonicParsing="false" onAction="#btnMaxOnAction" opacity="0.0" prefHeight="30.0" prefWidth="30.0" AnchorPane.rightAnchor="68.33333333333326" AnchorPane.topAnchor="16.0" />
+            <Button fx:id="btnMinimize" layoutX="1227.0" layoutY="18.0" mnemonicParsing="false" onAction="#btnMinimizeOnAction" opacity="0.0" prefHeight="30.0" prefWidth="30.0" AnchorPane.rightAnchor="118.33333333333326" AnchorPane.topAnchor="18.0" />
+            <Button fx:id="btnClose" layoutX="1323.0" layoutY="17.0" mnemonicParsing="false" onAction="#btnCloseOnAction" opacity="0.0" prefHeight="30.0" prefWidth="30.0" AnchorPane.rightAnchor="22.333333333333258" AnchorPane.topAnchor="17.0" />
+         </children>
+         <BorderPane.margin>
+            <Insets bottom="8.0" />
+         </BorderPane.margin>
+      </AnchorPane>
+   </top>
+</BorderPane>
